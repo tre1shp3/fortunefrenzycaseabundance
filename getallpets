@@ -294,7 +294,7 @@ game:GetService("ReplicatedStorage").Remotes.Announce.Announce:FireServer(unpack
 local Section2 = Tab:CreateSection("Pet Destroyer")
 
 local Button = Tab:CreateButton({
-   Name = "Button Example",
+   Name = "Raper Of Inventory!",
    Callback = function()
    local inven = game.Players.LocalPlayer.PlayerGui.PetsGui.Frame.MainFrame.MainFrame.Inventory
 
